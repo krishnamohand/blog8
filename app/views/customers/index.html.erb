@@ -1,0 +1,22 @@
+
+<table border=5px, width=700>
+<th>fname</th> <th>lname</th><th>age</th>
+      <tr>
+     <%@customers.each do |customer|%>
+ <p>
+<td><%=customer.fname%></td>
+<td><%=customer.lname%></td>
+<td><%=customer.age%></td>
+ </p>
+
+ <td><%=link_to 'Show', customer_path(customer)%></td>
+<td><%=link_to 'Edit', edit_customer_path(customer)%></td>
+ <td><%=link_to 'Delete', customer_path(customer), :method=> 'delete'%></td>
+
+
+</tr>
+
+ <%end%>
+</table>
+
+<%=link_to 'New Customer', new_customer_path%>

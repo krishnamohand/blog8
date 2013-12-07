@@ -1,0 +1,20 @@
+
+<%=form_for :customer, url: customers_path do |f| %>
+ <p>
+<%=f.label :fname%><br>
+<%=f.text_field :fname%>
+ </p>
+ <p>
+<%=f.label :lname%><br>
+<%=f.text_field :lname%>
+ </p>
+
+ <p>
+<%=f.label :age%><br>
+<%=f.text_field :age%>
+ </p>
+
+ <%=f.submit%>
+
+ <%end%>
+

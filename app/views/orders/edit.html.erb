@@ -1,0 +1,25 @@
+<%= form_for :order, url: order_path(@order.id), method: :patch do |f| %>
+
+
+<p>
+<%=f.label :products_name%><br>
+<%=f.text_field :products_name%>
+ </p>
+
+ <p>
+<%=f.label :date%><br>
+<%=f.date_field :date%>
+ </p>
+
+ <p>
+<%=f.label :customer_id%><br>
+<%=f.text_field :customer_id%>
+ </p>
+
+ <%=f.submit%><br>
+
+ <%end%> 
+
+ <%=link_to 'Back', orders_path%>
+
+
